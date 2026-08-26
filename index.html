@@ -66,14 +66,15 @@
 
   /* product cards */
   .grid{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-  .card{background:var(--branco);border:2px solid var(--noite);text-align:left;cursor:pointer;padding:0;font:inherit;color:inherit;transition:transform .15s}
+  .card{display:flex;flex-direction:column;width:100%;background:var(--branco);border:2px solid var(--noite);text-align:left;cursor:pointer;padding:0;font:inherit;color:inherit;transition:transform .15s}
   .card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--terra)}
-  .card .ph{aspect-ratio:4/5;background:var(--terra);position:relative;overflow:hidden}
+  .card .ph{display:block;aspect-ratio:4/5;background:var(--terra);position:relative;overflow:hidden}
   .card .ph img{width:100%;height:100%;object-fit:cover}
   .ph.empty img{display:none}
   .ph.empty::after{content:"PHOTO SOON";font-family:'Space Grotesk',monospace;font-size:.75rem;letter-spacing:.2em;color:var(--branco);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,var(--terra) 0 14px,var(--terra-deep) 14px 28px)}
   .badge{position:absolute;top:10px;left:10px;background:var(--sol);color:var(--noite);font-family:'Space Grotesk',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px}
-  .card .info{padding:14px 16px 16px}
+  .card .info{display:block;padding:14px 16px 16px}
+  .card .cat,.card .price{display:block}
   .card .cat{font-family:'Space Grotesk',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
   .card h3{font-size:1.15rem;margin:4px 0 2px}
   .card .price{font-family:'Space Grotesk',monospace;font-size:.95rem}
